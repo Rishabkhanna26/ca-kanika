@@ -22,7 +22,7 @@ export default function Header() {
         {/* Left: Logo */}
         <div className="ks-header-logo">
           <div className="ks-logo-icon">
-            <Scale className="ks-logo-icon-svg" />
+            <img className="ks-logo-icon-svg" src="/Untitled-design.png" alt="" />
           </div>
           <div>
             <h1 className="ks-logo-title">CA Kanika Sharma</h1>

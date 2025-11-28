@@ -153,39 +153,12 @@ body {
   color: #ffffff;
 }
 
-/* Stats */
-.ks-hero-stats-row {
-  margin-top: 2.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
 
-@media (min-width: 640px) {
-  .ks-hero-stats-row {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
 
-.ks-hero-stat {
-  padding-right: 0.75rem;
-  border-right: 1px solid #e5e7eb;
-}
 
-.ks-hero-stat:last-child {
-  border-right: none;
-}
 
-.ks-hero-stat-value {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #002b7f;
-}
 
-.ks-hero-stat-label {
-  font-size: 0.8rem;
-  color: #6b7280;
-}
+
 
 /* Right card */
 .ks-hero-right {
@@ -260,7 +233,7 @@ body {
 /* Services */
 .ks-services-section {
   padding: 4rem 0;
-  background-color: #ffffff;
+  background-color: #F8FAFC;
 }
 
 .ks-section-inner {
@@ -305,7 +278,7 @@ body {
 .ks-service-card {
   padding: 1.5rem;
   border-radius: 1rem;
-  background-color: #f9fafb;
+  background-color: white;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -337,4 +310,59 @@ body {
 .ks-service-text {
   font-size: 0.9rem;
   color: #6b7280;
+}
+
+
+/* ====================================
+   STATIC TAILWIND-LIKE STATS SECTION
+   ==================================== */
+
+.ks-stats-section {
+  background: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.ks-stats-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.ks-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ks-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ks-stats-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.ks-stats-card:hover {
+  transform: scale(1.1);
+}
+
+.ks-stats-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #009b77; /* your chosen green */
+  margin-bottom: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .ks-stats-value {
+    font-size: 3rem;
+  }
+}
+
+.ks-stats-label {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
 }

@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <div className="ks-footer-brand">
               <div className="ks-footer-logo-icon">
-                <Scale className="ks-footer-logo-svg" />
+                <img className="ks-logo-icon-footer" src="/Untitled-design.png" alt="" />
               </div>
               <div>
                 <h3 className="ks-footer-title">CA Kanika Sharma</h3>
@@ -66,13 +66,13 @@ export default function Footer() {
               <li>
                 <Phone className="ks-footer-icon" />
                 <a href="tel:+919876543210" className="ks-footer-link">
-                  +91 98765 43210
+                  +91 76580 51945
                 </a>
               </li>
               <li>
                 <MapPin className="ks-footer-icon" />
                 <span className="ks-footer-link">
-                  Mumbai, Maharashtra, India
+                  Jalandhar, Punjab, India
                 </span>
               </li>
             </ul>

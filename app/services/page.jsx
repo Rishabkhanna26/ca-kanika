@@ -194,7 +194,8 @@ export default function ServicesPage() {
             <div className="ks-services-hero-right">
               <div className="ks-services-hero-card">
                 <div className="ks-services-hero-icon-wrap">
-                  <Scale className="ks-services-hero-icon" />
+                <img className="ks-logo-icon-img" src="/Untitled-design.png" alt="" />
+
                 </div>
                 <h3 className="ks-services-hero-card-title">
                   Trusted Chartered Accountancy Partner

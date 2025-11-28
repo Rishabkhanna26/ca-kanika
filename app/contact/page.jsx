@@ -18,7 +18,7 @@ export default function ContactPage() {
     {
       icon: <Phone className="ks-contact-info-icon" />,
       title: "Phone",
-      content: "+91 98765 43210",
+      content: "+91 76580 51945",
       link: "tel:+919876543210",
     },
     {
@@ -30,7 +30,7 @@ export default function ContactPage() {
     {
       icon: <MapPin className="ks-contact-info-icon" />,
       title: "Office",
-      content: "Mumbai, Maharashtra, India",
+      content: "Jalandhar, Punjab, India",
       link: "#",
     },
     {
@@ -176,7 +176,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         className="ks-contact-input"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 76580 51945"
                       />
                     </div>
 
@@ -219,10 +219,10 @@ export default function ContactPage() {
                   Prefer to talk directly? Get in touch with us now.
                 </p>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917658051945"
                   className="ks-contact-cta-button"
                 >
-                  Call Now: +91 98765 43210
+                  Call Now: +91 76580 51945
                 </a>
               </div>
             </div>

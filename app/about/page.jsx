@@ -11,6 +11,29 @@ import {
 import "./style.css";
 
 export default function AboutPage() {
+  const experience = [
+  {
+    year: "2013",
+    title: "Started CA Journey",
+    description: "Began professional studies and foundational training in finance and accounting."
+  },
+  {
+    year: "2016",
+    title: "Industry Exposure",
+    description: "Worked with mid-sized firms gaining experience in taxation and corporate compliance."
+  },
+  {
+    year: "2019",
+    title: "Auditing & Financial Advisory",
+    description: "Led audit assignments and advised businesses on financial structuring."
+  },
+  {
+    year: "2022",
+    title: "Established Independent Practice",
+    description: "Started offering full-fledged CA services with a focus on SMEs and startups."
+  },
+];
+
   const qualifications = [
     {
       icon: <GraduationCap className="ks-about-qual-icon" />,
@@ -113,9 +136,51 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+{/* PROFESSIONAL JOURNEY SECTION */}
+<section className="ks-journey-section">
+  <div className="ks-journey-container">
+
+    {/* Section Header */}
+    <div className="ks-journey-header">
+      <h2 className="ks-journey-title">Professional Journey</h2>
+      <p className="ks-journey-subtitle">
+        A track record of excellence and continuous growth
+      </p>
+    </div>
+
+    {/* Timeline Container */}
+    <div className="ks-journey-timeline">
+      <div className="ks-journey-line"></div>
+
+      <div className="ks-journey-content">
+        {experience.map((exp, index) => (
+          <div
+            key={index}
+            className={`ks-journey-row ${
+              index % 2 === 0 ? "ks-row-normal" : "ks-row-reverse"
+            }`}
+          >
+            <div className="ks-journey-card">
+              <p className="ks-journey-year">{exp.year}</p>
+              <h3 className="ks-journey-card-title">{exp.title}</h3>
+              <p className="ks-journey-desc">{exp.description}</p>
+            </div>
+
+            {/* Middle Dot */}
+            <div className="ks-journey-dot"></div>
+
+            {/* Spacer (other side) */}
+            <div className="ks-journey-empty"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* Values Section */}
-      <section className="ks-about-section ks-about-section-white">
+      <section className="ks-about-section ks-about-section-light">
         <div className="ks-about-container">
           <div className="ks-about-values-header">
             <h2 className="ks-about-values-title">

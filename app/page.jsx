@@ -15,6 +15,12 @@ import { useRouter } from "next/navigation";
 
 export default function HomePage() {
   const router = useRouter();
+const stat = [
+  { label: "Years Experience", value: "10+" },
+  { label: "Clients Served", value: "250+" },
+  { label: "Industries Covered", value: "15+" },
+  { label: "Client Retention", value: "95%" },
+];
 
   const services = [
     {
@@ -82,7 +88,7 @@ export default function HomePage() {
                 </button>
               </div>
 
-              {/* Stats */}
+              {/* Stats
               <div className="ks-hero-stats-row">
                 {stats.map((s) => (
                   <div key={s.label} className="ks-hero-stat">
@@ -90,7 +96,7 @@ export default function HomePage() {
                     <p className="ks-hero-stat-label">{s.label}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Right card */}
@@ -134,6 +140,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+{/* NEW STATIC TAILWIND STATS SECTION */}
+<section className="ks-stats-section">
+  <div className="ks-stats-container">
+    <div className="ks-stats-grid">
+      {stats.map((stat) => (
+        <div key={stat.label} className="ks-stats-card">
+          <p className="ks-stats-value">{stat.value}</p>
+          <p className="ks-stats-label">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* SERVICES */}
       <section className="ks-services-section">
