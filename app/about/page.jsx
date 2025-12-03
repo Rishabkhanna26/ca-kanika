@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Award,
   BookOpen,
@@ -7,126 +8,130 @@ import {
   GraduationCap,
   Target,
   Users,
+  ArrowRight,
+  Calculator,
+  FileText,
+  TrendingUp,
+  Shield,
 } from "lucide-react";
 import "./style.css";
 
 export default function AboutPage() {
-  const experience = [
-  {
-    year: "2013",
-    title: "Started CA Journey",
-    description: "Began professional studies and foundational training in finance and accounting."
-  },
-  {
-    year: "2016",
-    title: "Industry Exposure",
-    description: "Worked with mid-sized firms gaining experience in taxation and corporate compliance."
-  },
-  {
-    year: "2019",
-    title: "Auditing & Financial Advisory",
-    description: "Led audit assignments and advised businesses on financial structuring."
-  },
-  {
-    year: "2022",
-    title: "Established Independent Practice",
-    description: "Started offering full-fledged CA services with a focus on SMEs and startups."
-  },
-];
-
   const qualifications = [
     {
-      icon: <GraduationCap className="ks-about-qual-icon" />,
+      icon: <GraduationCap size={20} />,
       title: "Chartered Accountant",
       description: "Institute of Chartered Accountants of India (ICAI)",
     },
     {
-      icon: <BookOpen className="ks-about-qual-icon" />,
+      icon: <BookOpen size={20} />,
       title: "Advanced Taxation",
       description: "Specialized in Direct and Indirect Taxation",
     },
     {
-      icon: <Award className="ks-about-qual-icon" />,
-      title: "Certified Professional",
-      description: "Multiple certifications in finance and compliance",
+      icon: <Award size={20} />,
+      title: "Audit Specialist",
+      description: "Certified in Statutory and Internal Audits",
+    },
+  ];
+
+  const experience = [
+    {
+      year: "2014 - Present",
+      title: "Independent Practice",
+      description:
+        "Providing comprehensive CA services to businesses and individuals",
+    },
+    {
+      year: "2012 - 2014",
+      title: "Senior Associate",
+      description: "Worked with leading audit and taxation firm",
+    },
+    {
+      year: "2010 - 2012",
+      title: "Article Assistant",
+      description: "Completed articleship with renowned CA firm",
     },
   ];
 
   const values = [
     {
-      icon: <Target className="ks-about-value-icon" />,
+      icon: <Target size={28} />,
       title: "Integrity",
-      description: "Honest and transparent financial practices",
+      description:
+        "Maintaining the highest ethical standards in all our dealings",
     },
     {
-      icon: <Users className="ks-about-value-icon" />,
+      icon: <Users size={28} />,
       title: "Client Focus",
-      description: "Personalized attention to every client",
+      description: "Your success is our priority, always putting clients first",
     },
     {
-      icon: <Briefcase className="ks-about-value-icon" />,
+      icon: <Briefcase size={28} />,
       title: "Excellence",
       description: "Delivering exceptional service with attention to detail",
     },
   ];
 
   return (
-    <div className="ks-about-root">
-      {/* Intro Section */}
-      <section className="ks-about-section ks-about-section-light">
-        <div className="ks-about-container">
-          <div className="ks-about-grid">
-            {/* Left text */}
-            <div className="ks-about-left">
-              <h1 className="ks-about-title">
-                About <span className="ks-about-title-highlight">CA Kanika Sharma</span>
+    <div className="about-root pt-16">
+      {/* Hero / Intro */}
+      <section className="about-hero" style={{ backgroundColor: "#f8fafc" }}>
+        <div className="container">
+          <div className="about-grid">
+            <div className="about-left animate-fadeInLeft">
+              <div className="badge compact">
+                <span className="badge-dot" />
+                Trusted Chartered Accountant for modern businesses
+              </div>
+
+              <h1 className="about-title">
+                About{" "}
+                <span className="about-title-accent">CA Kanika Sharma</span>
               </h1>
-              <p className="ks-about-lead">
-                With a strong foundation in chartered accountancy and over a
-                decade of experience, CA Kanika Sharma has been helping
-                individuals and businesses navigate complex financial and
-                regulatory landscapes with confidence.
-              </p>
-              <p className="ks-about-body">
-                From tax planning and audit to business advisory and compliance
-                management, the focus is always on providing clear, practical,
-                and customized solutions that align with your goals.
+
+              <p className="about-lead">
+                With over a decade of experience in the field of chartered
+                accountancy, I have been dedicated to helping businesses and
+                individuals navigate complex financial landscapes with
+                confidence and clarity.
               </p>
 
-              <ul className="ks-about-bullets">
-                <li>✔ Deep expertise in taxation, audit, and financial advisory</li>
-                <li>✔ Focus on long-term relationships and consistent support</li>
-                <li>✔ Commitment to transparency, ethics, and professionalism</li>
-              </ul>
+              <p className="about-body">
+                My approach combines technical expertise with personalized
+                service, ensuring that each client receives tailored solutions
+                that align with their unique goals and circumstances.
+              </p>
             </div>
 
-            {/* Right card */}
-            <div className="ks-about-right">
-              <div className="ks-about-right-frame">
-                <div className="ks-about-right-card">
-                  <h2 className="ks-about-right-title">Professional Profile</h2>
-                  <p className="ks-about-right-subtitle">
-                    Qualifications & Expertise
-                  </p>
+            <div className="about-right animate-fadeInRight">
+              <div className="profile-frame">
+                <div className="profile-card">
+                  <div className="profile-head">
+                    <h3 className="profile-title">Professional Profile</h3>
+                    <p className="profile-sub">Qualifications & Expertise</p>
+                  </div>
 
-                  <div className="ks-about-qual-list">
-                    {qualifications.map((qual, index) => (
-                      <div key={index} className="ks-about-qual-item">
-                        <div className="ks-about-qual-icon-wrap">
-                          {qual.icon}
-                        </div>
+                  <div className="quals">
+                    {qualifications.map((q, i) => (
+                      <div
+                        key={i}
+                        className="qual-item"
+                        title={q.title}
+                      >
+                        <div className="qual-icon">{q.icon}</div>
                         <div>
-                          <h3 className="ks-about-qual-title">{qual.title}</h3>
-                          <p className="ks-about-qual-desc">{qual.description}</p>
+                          <div className="qual-title">{q.title}</div>
+                          <div className="qual-desc">{q.description}</div>
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  <div className="ks-about-highlight-box">
-                    <p className="ks-about-highlight-text">
+                  <div className="highlight-box">
+                    <p className="highlight-text">
                       “Our approach is to combine technical expertise with a
-                      deep understanding of each client&apos;s unique financial
+                      deep understanding of each client's unique financial
                       journey.”
                     </p>
                   </div>
@@ -136,70 +141,93 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-{/* PROFESSIONAL JOURNEY SECTION */}
-<section className="ks-journey-section">
-  <div className="ks-journey-container">
 
-    {/* Section Header */}
-    <div className="ks-journey-header">
-      <h2 className="ks-journey-title">Professional Journey</h2>
-      <p className="ks-journey-subtitle">
-        A track record of excellence and continuous growth
-      </p>
-    </div>
-
-    {/* Timeline Container */}
-    <div className="ks-journey-timeline">
-      <div className="ks-journey-line"></div>
-
-      <div className="ks-journey-content">
-        {experience.map((exp, index) => (
-          <div
-            key={index}
-            className={`ks-journey-row ${
-              index % 2 === 0 ? "ks-row-normal" : "ks-row-reverse"
-            }`}
-          >
-            <div className="ks-journey-card">
-              <p className="ks-journey-year">{exp.year}</p>
-              <h3 className="ks-journey-card-title">{exp.title}</h3>
-              <p className="ks-journey-desc">{exp.description}</p>
-            </div>
-
-            {/* Middle Dot */}
-            <div className="ks-journey-dot"></div>
-
-            {/* Spacer (other side) */}
-            <div className="ks-journey-empty"></div>
+      {/* Professional Journey */}
+      <section className="journey-section">
+        <div className="container">
+          <div className="journey-header text-center">
+            <h2 className="journey-title">Professional Journey</h2>
+            <p className="journey-sub">A track record of excellence and continuous growth</p>
           </div>
-        ))}
-      </div>
-    </div>
 
-  </div>
-</section>
+          <div className="journey-wrap">
+            <div className="journey-line" />
 
-      {/* Values Section */}
-      <section className="ks-about-section ks-about-section-light">
-        <div className="ks-about-container">
-          <div className="ks-about-values-header">
-            <h2 className="ks-about-values-title">
-              Core <span className="ks-about-title-highlight">Values</span>
+            <div className="journey-list">
+              {experience.map((exp, idx) => (
+                <div
+                  key={idx}
+                  className={
+                    "journey-row " + (idx % 2 === 0 ? "row-normal" : "row-reverse")
+                  }
+                >
+                  <div className="journey-card animate-fadeIn">
+                    <div className="journey-year" style={{ color: "#009B77", fontWeight: 700 }}>
+                      {exp.year}
+                    </div>
+                    <h3 className="journey-job">{exp.title}</h3>
+                    <p className="journey-desc">{exp.description}</p>
+                  </div>
+
+                  <div className="journey-dot" />
+
+                  <div className="journey-empty" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="about-values" style={{ backgroundColor: "#f8fafc" }}>
+        <div className="container">
+          <div className="values-header text-center">
+            <h2 className="values-title">
+              Our Core <span className="about-title-accent">Values</span>
             </h2>
-            <p className="ks-about-values-subtitle">
-              Every engagement is guided by strong professional ethics and a
-              commitment to long-term success for clients.
+            <p className="values-sub">
+              The principles that guide everything we do
             </p>
           </div>
 
-          <div className="ks-about-values-grid">
-            {values.map((value, index) => (
-              <div key={index} className="ks-about-value-card">
-                <div className="ks-about-value-icon-wrap">{value.icon}</div>
-                <h3 className="ks-about-value-title">{value.title}</h3>
-                <p className="ks-about-value-desc">{value.description}</p>
+          <div className="values-grid">
+            {values.map((v, i) => (
+              <div key={i} className="value-card">
+                <div className="value-icon-wrap">{v.icon}</div>
+                <h3 className="value-title">{v.title}</h3>
+                <p className="value-desc">{v.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose - CTA style */}
+      <section className="why-choose" style={{ backgroundColor: "#002B7F", color: "#fff" }}>
+        <div className="container text-center">
+          <h2 className="why-title">Why Choose CA Kanika Sharma?</h2>
+
+          <div className="why-grid">
+            <div className="why-card translucent">
+              <h3 className="why-card-title">Personalized Attention</h3>
+              <p>Every client receives dedicated, one-on-one service tailored to their needs</p>
+            </div>
+
+            <div className="why-card translucent">
+              <h3 className="why-card-title">Expert Knowledge</h3>
+              <p>Stay compliant with latest regulations and tax laws</p>
+            </div>
+
+            <div className="why-card translucent">
+              <h3 className="why-card-title">Timely Service</h3>
+              <p>Never miss a deadline with our efficient service delivery</p>
+            </div>
+
+            <div className="why-card translucent">
+              <h3 className="why-card-title">Transparent Pricing</h3>
+              <p>Clear, upfront pricing with no hidden fees or surprises</p>
+            </div>
           </div>
         </div>
       </section>

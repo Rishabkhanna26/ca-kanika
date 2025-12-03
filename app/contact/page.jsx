@@ -50,10 +50,21 @@ export default function ContactPage() {
     if (isSubmitted) setIsSubmitted(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    // here you can integrate API/email service later
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (

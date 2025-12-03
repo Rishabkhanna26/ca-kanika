@@ -1,11 +1,13 @@
-/* app/services/style.css */
-
+/* =========================================================
+   ROOT
+========================================================= */
 .ks-services-root {
   padding-top: 4rem;
 }
 
-/* hero */
-
+/* =========================================================
+   HERO SECTION
+========================================================= */
 .ks-services-hero {
   padding: 4.5rem 0;
   background-color: #f8fafc;
@@ -63,6 +65,7 @@
   }
 }
 
+/* Primary + Secondary button */
 .ks-services-primary-btn,
 .ks-services-secondary-btn {
   padding: 0.9rem 2rem;
@@ -71,13 +74,12 @@
   font-size: 0.95rem;
   cursor: pointer;
   border: none;
-  transition: background-color 0.15s ease, color 0.15s ease,
-    transform 0.15s ease, box-shadow 0.15s ease;
+  transition: 0.25s ease;
 }
 
 .ks-services-primary-btn {
   background-color: #009b77;
-  color: #ffffff;
+  color: white;
   box-shadow: 0 12px 28px rgba(0, 155, 119, 0.4);
 }
 
@@ -94,11 +96,12 @@
 
 .ks-services-secondary-btn:hover {
   background-color: #002b7f;
-  color: #ffffff;
+  color: white;
 }
 
-/* hero right */
-
+/* =========================================================
+   HERO CARD (RIGHT SIDE)
+========================================================= */
 .ks-services-hero-right {
   animation: fadeInRight 0.8s ease-out forwards;
 }
@@ -110,13 +113,13 @@
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
   border-top: 4px solid #009b77;
 }
+
 .ks-logo-icon-img{
-  
   width: 3.5rem;
   height: 3.5rem;
   color: #ffffff;
-
 }
+
 .ks-services-hero-icon-wrap {
   width: 4rem;
   height: 4rem;
@@ -152,14 +155,16 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 0.35rem;
   font-size: 0.9rem;
   color: #4b5563;
-  display: grid;
-  gap: 0.3rem;
 }
 
-/* services section */
 
+/* =========================================================
+   SERVICES SECTION (GRID OF SERVICES)
+========================================================= */
 .ks-services-section {
   padding: 4rem 0;
   background-color: #F8FAFC;
@@ -183,6 +188,7 @@
   margin-top: 0.75rem;
 }
 
+/* GRID */
 .ks-services-grid {
   display: grid;
   gap: 1.5rem;
@@ -194,12 +200,13 @@
   }
 }
 
+/* CARD */
 .ks-services-card {
   border-radius: 1.1rem;
   padding: 1.75rem 1.5rem;
   background-color: #f9fafb;
   box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition: 0.25s ease;
 }
 
 .ks-services-card:hover {
@@ -219,11 +226,6 @@
   margin-bottom: 1rem;
 }
 
-.ks-services-icon {
-  width: 1.75rem;
-  height: 1.75rem;
-}
-
 .ks-services-card-title {
   font-size: 1.05rem;
   font-weight: 600;
@@ -237,18 +239,36 @@
   margin-bottom: 0.75rem;
 }
 
+/* FEATURES LIST */
 .ks-services-card-features {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 0.85rem;
-  color: #4b5563;
   display: grid;
   gap: 0.25rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+.ks-services-card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #4b5563;
 }
 
-/* process */
+.ks-check-icon {
+  color: #009b77;
+  font-weight: 900;
+  margin-top: 2px;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
 
+
+/* =========================================================
+   PROCESS SECTION
+========================================================= */
 .ks-services-process {
   padding: 4rem 0 4.5rem;
   background-color: #f3f4f6;
@@ -286,6 +306,8 @@
 .ks-services-process-card {
   text-align: center;
   padding: 1.5rem 1rem;
+  border-radius: 15px;
+  background-color: #F9FAFB;
 }
 
 .ks-services-process-step {
@@ -313,8 +335,10 @@
   color: #6b7280;
 }
 
-/* keyframes (if not global) */
 
+/* =========================================================
+   ANIMATIONS
+========================================================= */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -335,4 +359,12 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.8s ease-out forwards;
 }

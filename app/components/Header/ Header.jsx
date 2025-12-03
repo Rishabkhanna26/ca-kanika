@@ -41,7 +41,7 @@ export default function Header() {
 
         {/* Call to action */}
         <div className="ks-header-cta">
-          <a href="tel:+919876543210" className="ks-header-cta-btn">
+          <a href="tel:+917658051945" className="ks-header-cta-btn">
             Call Now
           </a>
         </div>
